@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
      "MIT-LICENSE",
      "README.rdoc",
      "Rakefile",
+     "VERSION",
      "example/server/example_servlet.rb",
      "example/server/liquid_servlet.rb",
      "example/server/server.rb",
