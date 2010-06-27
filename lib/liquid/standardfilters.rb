@@ -52,7 +52,7 @@ module Liquid
     end
     
     def strip_html(input)
-      input.to_s.gsub(/<.*?>/, '')
+      input.to_s.gsub(/<script.*?<\/script>/, '').gsub(/<.*?>/, '')
     end       
     
     # Remove all newlines from the string
@@ -189,22 +189,35 @@ module Liquid
     
     # addition
     def plus(input, operand)
-      input + operand if input.respond_to?('+')
+      to_number(input) + to_number(operand)
     end
     
     # subtraction
     def minus(input, operand)
-      input - operand if input.respond_to?('-')
+      to_number(input) - to_number(operand)
     end
     
     # multiplication
     def times(input, operand)
-      input * operand if input.respond_to?('*')
+      to_number(input) * to_number(operand)
     end
     
     # division
     def divided_by(input, operand)
-      input / operand if input.respond_to?('/')
+      to_number(input) / to_number(operand)
+    end
+    
+    private
+    
+    def to_number(obj)
+      case obj
+      when Numeric
+        obj
+      when String
+        (obj.strip =~ /^\d+\.\d+$/) ? obj.to_f : obj.to_i
+      else
+        0
+      end
     end
     
   end
