@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 require File.dirname(__FILE__) + '/helper'
-require 'ruby-debug'
 
 module MoneyFilter
   def money(input)
