@@ -52,5 +52,5 @@ Version 2.1 of the Liquid gem is _currently_ being tested with Ruby on Rails 3 b
 
 == How to contribute
 
-  * If you have any issues, please use Github's issue tracker on this project
+  * If you have any issues, please drop us a line at https://jadedpixel.lighthouseapp.com/projects/11053-liquid/overview
   * Feel free to contribute with code. Fork the project and make your changes (with tests).
