@@ -1,5 +1,3 @@
-* Fixed bugs with ruby 1.9.1 and ruby 1.9.2
-
 * Ruby 1.9.1 bugfixes
 
 * Fix LiquidView for Rails 2.2. Fix local assigns for all versions of Rails
